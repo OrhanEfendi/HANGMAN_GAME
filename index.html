@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="heder bg-black d-flex justify-content-center flex-column">
+      <h1>HANGMAN</h1>
+    </header>
+
+    <main class="my-5 p-5">
+      <div class="row g-5 bg-white">
+        <div class="col-6">
+          <img
+            id="imgHang"
+            width="600"
+            height="600"
+            src="./assets/images/hang-0.png"
+            alt=""
+          />
+        </div>
+        <div class="col-5 d-flex flex-column align-items-center">
+          <h2 id="questTitle">Movie</h2>
+          <h3 id="question">
+            It can be found in many colors and is usually sweet.
+          </h3>
+          <div class="my-5">
+            <ul id="questLeng" class="wordDisplay"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="my-5 row d-flex justify-content-around">
+        <p class="h2 text-warning col-3">
+          COMPUTER : <span id="compScore"></span>
+        </p>
+        <p class="h2 text-warning col-3">
+          GUESSES LEFT : <span id="guestLeft"></span>
+        </p>
+        <p class="h2 text-warning col-3">YOU : <span id="youScore"></span></p>
+      </div>
+      <div class="py-5 my-5 d-flex flex-column justify-content-start">
+        <p class="h2 text-warning d-block">
+          Your Guesses so far: <span id="guess_arr"></span>
+        </p>
+        <p id="trueAns" class="h2 text-warning d-block"></p>
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

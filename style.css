@@ -1,0 +1,93 @@
+.heder {
+  width: 100%;
+}
+body {
+  background-color: black;
+  color: rgb(29, 30, 31);
+  position: relative;
+}
+
+.heder h1 {
+  position: relative;
+  margin: 0;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 200px;
+  font-style: italic;
+  line-height: 1;
+  background-image: linear-gradient(
+    #378dbc 0%,
+    #b6e8f1 46%,
+    #fff 50%,
+    #32120e 54%,
+    #ffc488 58%,
+    #582c11 90%,
+    #ec9b4e 100%
+  );
+  color: transparent;
+  -webkit-text-stroke: 4px #f5f5f5;
+  -webkit-background-clip: text;
+  text-align: center;
+}
+.heder h1::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding-right: 300px;
+  content: "CHROME";
+  background-image: linear-gradient(
+    -40deg,
+    transparent 0%,
+    transparent 40%,
+    #fff 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-position: -680px 0;
+  /* -webkit-background-clip: text; */
+  animation-name: chrome_effect;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  -webkit-text-stroke: 0;
+  width: 100%;
+  animation: full 5s linear infinite running;
+}
+
+@keyframes full {
+  0% {
+    background-position: -716px 0;
+  }
+  25% {
+    background-position: -300px 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  75% {
+    background-position: 350px 0;
+  }
+  100% {
+    background-position: 700px 0;
+  }
+}
+
+.wordDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.wordDisplay .letter {
+  width: 28px;
+  border-bottom: 3px solid #000;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
