@@ -164,6 +164,7 @@ class HangmanGame {
 }
 
 const Mygame = new HangmanGame(hangmanQuestions);
+Mygame.domUI();
 Mygame.restart();
 
 window.addEventListener("keypress", (e) => {
@@ -199,7 +200,7 @@ window.addEventListener("keypress", (e) => {
   } else if (Mygame.chanceTry === 0) {
     console.log("Kaybettiniz");
     Mygame.lose++;
-    trueAns.innerHTML = `Trueanswer: ${Mygame.answer_arr.join("")}`;
+    trueAns.innerHTML = `True answer: ${Mygame.answer_arr.join("")}`;
 
     setTimeout(() => {
       Mygame.restart();
